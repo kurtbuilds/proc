@@ -278,6 +278,7 @@ dependencies = [
 name = "proc-find"
 version = "0.1.0"
 dependencies = [
+ "atty",
  "clap",
  "libproc",
  "netstat2",

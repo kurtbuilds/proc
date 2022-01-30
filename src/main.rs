@@ -114,8 +114,8 @@ fn main() {
         }
         return;
     }
-    let table_header = args.is_present("all");
-    let table_columns = args.is_present("all");
+    let table_header = args.is_present("all") || atty::is(atty::Stream::Stdout);
+    let table_columns = args.is_present("all") || atty::is(atty::Stream::Stdout);
 
     let mut table =
         if table_columns {
