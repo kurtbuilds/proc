@@ -19,14 +19,14 @@ const NAME: &str = env!("CARGO_PKG_NAME");
 
 
 fn get_processes(ports: Vec<PortInfo>) -> Vec<ProcessInfo> {
-    let mut procs: Vec<ProcessInfo> = Vec::new();
+    let mut processes: Vec<ProcessInfo> = Vec::new();
     for port in ports.into_iter() {
         let proc = port.process_info.into_iter().next().unwrap();
-        if !procs.iter().any(|p| p.pid == proc.pid) {
-            procs.push(proc);
+        if !processes.iter().any(|p| p.pid == proc.pid) {
+            processes.push(proc);
         }
     }
-    procs
+    processes
 }
 
 
@@ -50,7 +50,7 @@ fn main() {
         .arg(Arg::new("force")
             .long("force")
             .requires("command")
-            .help("By default, procs requires a filter (currently, only -u) to execute a command, \
+            .help("By default, proc requires a filter (currently, only -u) to execute a command, \
             so that you don't accidentally run a command (like kill) on every active process. 💀 \
             Use --force if you need to override this.")
             .takes_value(false)
@@ -58,7 +58,7 @@ fn main() {
         .arg(Arg::new("command")
             .last(true)
             .help("Command to execute. The pid is passed either at the end, or replacing {}. Example:
-            procs --port 5000 -- kill
+            proc --port 5000 -- kill
 
             will send kill (SIGKILL) to the process listening on port 5000.
             ")
