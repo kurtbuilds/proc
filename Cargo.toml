@@ -1,5 +1,5 @@
 [package]
-name = "procs"
+name = "proc-find"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
@@ -19,6 +19,10 @@ keywords = [
     "ps",
 ]
 
+
+[[bin]]
+name = "proc"
+path = "src/main.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
