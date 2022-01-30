@@ -27,17 +27,17 @@ it is listening on, but more features are planned.
 # Usage
 
     # Find the process listening on port 5000
-    procs -p 5000 
+    proc -p 5000 
 
     # Find the process listening on port 5000 and print the process name
-    procs -ap 5000
+    proc -ap 5000
 
     # Find the process listening on port 5000 and kill it  
-    procs -p 5000 -- kill
+    proc -p 5000 -- kill
 
 # Installation
 
-    cargo install procs
+    cargo install proc-find
 
 # Roadmap
 
