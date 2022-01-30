@@ -5,9 +5,9 @@ use users::{get_current_uid, get_user_by_uid, User};
 pub struct ProcessInfo {
     pub pid: Pid,
     pub name: String,
-    pub cmd: String,
     pub owner: User,
     pub is_current_user: bool,
+    pub command: Vec<String>,
 }
 
 impl From<i32> for ProcessInfo {
@@ -19,7 +19,7 @@ impl From<i32> for ProcessInfo {
         Self {
             pid: process.pid(),
             name: process.name().to_string(),
-            cmd: process.cmd().first().unwrap_or(&empty).to_owned(),
+            command: process.cmd().to_vec(),
             owner: get_user_by_uid(process.uid).unwrap(),
             is_current_user: get_user_by_uid(process.uid).unwrap().uid() == get_current_uid(),
         }
