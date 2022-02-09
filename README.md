@@ -19,9 +19,9 @@
 
 </p>
 
-# procs
+# proc
 
-`procs` makes it easy to find and manage system processes. Right now, the main usage is finding processes by the ports 
+`proc` makes it easy to find and manage system processes. Right now, the main usage is finding processes by the ports 
 it is listening on, but more features are planned.
 
 # Usage
