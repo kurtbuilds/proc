@@ -2,19 +2,19 @@
 
 <p align="center">
 <a href="https://github.com/kurtbuilds/procs/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/kurtbuilds/procs.svg?style=flat-square" alt="GitHub Contributors" />
+    <img src="https://img.shields.io/github/contributors/kurtbuilds/proc-find.svg?style=flat-square" alt="GitHub Contributors" />
 </a>
 <a href="https://github.com/kurtbuilds/procs/stargazers">
-    <img src="https://img.shields.io/github/stars/kurtbuilds/procs.svg?style=flat-square" alt="Stars" />
+    <img src="https://img.shields.io/github/stars/kurtbuilds/proc-find.svg?style=flat-square" alt="Stars" />
 </a>
 <a href="https://github.com/kurtbuilds/procs/actions">
-    <img src="https://img.shields.io/github/workflow/status/kurtbuilds/procs/test?style=flat-square" alt="Build Status" />
+    <img src="https://img.shields.io/github/workflow/status/kurtbuilds/proc-find/test?style=flat-square" alt="Build Status" />
 </a>
 <a href="https://crates.io/crates/procs">
-    <img src="https://img.shields.io/crates/d/procs?style=flat-square" alt="Downloads" />
+    <img src="https://img.shields.io/crates/d/proc-find?style=flat-square" alt="Downloads" />
 </a>
 <a href="https://crates.io/crates/procs">
-    <img src="https://img.shields.io/crates/v/procs?style=flat-square" alt="Crates.io" />
+    <img src="https://img.shields.io/crates/v/proc-find?style=flat-square" alt="Crates.io" />
 </a>
 
 </p>
