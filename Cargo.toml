@@ -27,9 +27,9 @@ path = "src/main.rs"
 [dependencies]
 atty = "0.2.14"
 clap = { version = "4.5", features = ["derive"] }
-libproc = "0.10.0"
-netstat2 = "0.9.1"
+libproc = "0.14.11"
+netstat2 = "0.11"
 shell-escape = "0.1.5"
-sysinfo = "0.33"
+sysinfo = "0.37"
 tabular = "0.2.0"
 users = "0.11.0"
