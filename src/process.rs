@@ -1,4 +1,4 @@
-use sysinfo::{Pid, PidExt, ProcessExt, System, SystemExt};
+use sysinfo::{Pid, System};
 use users::{get_current_uid, get_user_by_uid, User};
 
 #[derive(Debug)]
@@ -12,16 +12,15 @@ pub struct ProcessInfo {
 
 impl From<i32> for ProcessInfo {
     fn from(pid: i32) -> Self {
-        let empty = String::from("");
         let sys = System::new_all();
         let process = sys.process(Pid::from_u32(pid as u32)).unwrap();
 
         Self {
             pid: process.pid(),
-            name: process.name().to_string(),
-            command: process.cmd().to_vec(),
-            owner: get_user_by_uid(process.uid).unwrap(),
-            is_current_user: get_user_by_uid(process.uid).unwrap().uid() == get_current_uid(),
+            name: process.name().to_string_lossy().to_string(),
+            command: process.cmd().iter().map(|s| s.to_string_lossy().to_string()).collect(),
+            owner: get_user_by_uid(process.user_id().map(|uid| **uid).unwrap()).unwrap(),
+            is_current_user: get_user_by_uid(process.user_id().map(|uid| **uid).unwrap()).unwrap().uid() == get_current_uid(),
         }
     }
 }
